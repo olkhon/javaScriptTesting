@@ -153,7 +153,7 @@ suite('Unit Tests', function () {
       assert.typeOf(myCar.model, 'string');
       assert.notTypeOf(airlinePlane.wings, 'string');
       assert.typeOf(airlinePlane.engines, 'array');
-      assert.notTypeOf(myCar.wheels, 'number');
+      assert.typeOf(myCar.wheels, 'number');
     });
     // #18
     test('#instanceOf, #notInstanceOf', function () {
