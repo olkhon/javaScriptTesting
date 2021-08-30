@@ -33,8 +33,8 @@ suite('Functional Tests', function () {
         .request(server)
         .get('/hello?name=Alex')
         .end(function (err, res) {
-          assert.fail(res.status, 200);
-          assert.fail(res.text, 'hello Alex');
+          assert.equal(res.status, 200);
+          assert.equal(res.text, 'hello Alex');
           done();
         });
     });
