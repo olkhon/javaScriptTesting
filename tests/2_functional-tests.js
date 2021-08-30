@@ -44,14 +44,14 @@ suite('Functional Tests', function () {
         .request(server)
         .put('/travellers')
         .send({ surname: 'Colombo' })
-        .send({ name: 'Alex' })
+        .send({ name: 'Cristoforo' })
         .end(function (err, res) {
           assert.equal(res.status, 200);
           assert.equal(res.type, 'application/json', 'Response should be json');
           assert.equal(
             res.body.name,
-            'Alex',
-            'res.body.name should be "Alex"'
+            'Cristoforo',
+            'res.body.name should be "Cristoforo"'
           );
           assert.equal(
             res.body.surname,
